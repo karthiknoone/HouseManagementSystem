@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Edit House</title>
+</head>
+<body>
+	<hr>
+
+		<div class="container" Style = text-align:center>
+		
+	<h2>Edit House</h2>
+	<form th:action="editHouse" th:object="${house}">
+		<p th:text="Updating+' '+${house}" />
+		
+		<input type="text" th:field="*{hno}" name="hno" placeholder="hno"><br><br>
+		<input type="text" th:field="*{model}" name="model" placeholder="model"><br><br>
+		<input type="text" th:field="*{address}" name="address" placeholder="address"><br><br>
+		<input type="text" th:field="*{cost}" name="cost" placeholder="cost"><br><br>
+		<input type="text" th:field="*{zipcode}" name="zipcode" placeholder="zipcode"><br><br>
+		
+	<input type="submit">
+	
+	</form>
+	</div>
+
+</body>
+</html>

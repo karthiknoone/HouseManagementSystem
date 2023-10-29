@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+      "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<!-- Required meta tags -->
+
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous">
+<title>House List</title>
+</head>
+<body>
+	<div class="container" Style = text-align:justify>
+	<table border="1">
+		<tr style="font-size: 13">
+			<td>Hno</td>
+			<td>Model</td>
+			<td>Address</td>
+			<td>Cost</td>
+			<td>Zipcode</td>
+			<td>Edit</td>
+			<td>Delete</td>
+		</tr>
+ 		<tr th:each="house: ${houses}">
+			<td><p th:text="${house.hno}" /></td>
+			<td><p th:text="${house.model}" /></td>
+			<td><p th:text="${house.address}" /></td>
+			<td><p th:text="${house.cost}" /></td>
+			<td><p th:text="${house.zipcode}" /></td>
+		
+		  	<td><a th:href ="@{/editHouse?hno={hno}(hno=${house.hno})}+ '&'+
+			@{model={model}(model=${house.model})}+ '&'+
+			@{address={address}(address=${house.address})}+ '&'+ @{cost={cost}(cost=${house.cost})}+ '&'+ @{zipcode={zipcode}(zipcode=${house.zipcode})} ">EDIT</a>
+		  	</td>
+		  	
+		  	
+		  	
+			<td><a th:href = "@{/deleteHouse?hno={hno}(hno=${house.hno})}+ '&'+
+			@{model={model}(model=${house.model})}+ '&'+
+			@{address={address}(address=${house.address})}+ '&'+ @{cost={cost}(cost=${house.cost})}+ '&'+ @{zipcode={zipcode}(zipcode=${house.zipcode})} " >DELETE
+			</a> </td>
+
+		</tr>  
+	</table>
+	</div>
+</body>
+</html>
+

@@ -24,6 +24,7 @@ import com.example.HMS.Repository.HmsRepository;
 // which acts connecting request from website to back-end code
 // and also performs the operation based on web request 
 
+	//karthik
 @Controller
 public class HouseController {
 

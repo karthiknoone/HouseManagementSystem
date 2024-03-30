@@ -30,7 +30,7 @@ public class HouseController {
 
 	ModelAndView mv = new ModelAndView();
 	@Autowired
-	HmsRepository houserepo;
+	HmsRepository houserepo  ;
 
 	/*
 	 * @RequestMapping("home") public String home() { return "home.html"; }

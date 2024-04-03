@@ -18,7 +18,7 @@ import com.example.HMS.Models.House;
 import com.example.HMS.Repository.HmsRepository;
 
 /**
- * @author karthik
+ * @author kart
  *
  */
 // which acts connecting request from website to back-end code
